@@ -47,4 +47,4 @@ Examples:
 Après avoir récupérer le projet sur git, il faut exécuter la commande maven "mvn clean verify" pour lancer les tests  
 
 Une fois lancé, un rapport sera généré et il sera disponible à ce répertoire: project\target\site\serenity\index.html (problème de compatibilité avec testng) ou sur ce répertoire également: project/target/cucumber-report-html/cucumber-html-reports/*.html  
-Il est aussi possible de tester l'appel des services en démarrant l'application via la requête mvn spring-boot:run et en faisant appel aux différents web service  
+Il est aussi possible de tester l'appel des services en démarrant l'application via la requête "mvn spring-boot:run" et en faisant appel aux différents web service  
