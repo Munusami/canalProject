@@ -38,7 +38,7 @@ When le conseiller connecté à "<canal>" modifie l'adresse de l'abonné "condit
 Then l'adresse de l'abonné modifiée est enregistrée sur l'ensemble des contrats de l'abonné  
 And Et un mouvement de modification d'adresse est créé  
 
-Examples:
+Examples:  
 | canal | active   | pays   | condition         |  
 | FACE  | inactive |France  | sans date d’effet |  
 | EC    | active   |Pologne |avec date d’effet 	|  
