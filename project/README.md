@@ -1,10 +1,10 @@
 # Projet canal:Modification de l'adresse d'un client
 
 ## Interprétation de l'énoncé
-L'exercice consistait à réaliser les tests permettant de modifier l'adresse d'un abonné résidant en France.
-Par conséquent, la modification de l'adresse n'était pas permise pour les pays qui étaient différents de la France.
-La création d'un mouvement d'adresse permet selon moi de garder une trace des différentes modifications subies par une adresse
-Je suis parti du principe qu'un abonné peut avoir différents contrats avec différentes adresses pour chacun
+L'exercice consistait à réaliser les tests permettant de modifier l'adresse d'un abonné résidant en France.  
+Par conséquent, la modification de l'adresse n'était pas permise pour les pays qui étaient différents de la France.  
+La création d'un mouvement d'adresse permet selon moi de garder une trace des différentes modifications subies par une adresse  
+Je suis parti du principe qu'un abonné peut avoir différents contrats avec différentes adresses pour chacun  
 
 ## Structure du projet
 src
