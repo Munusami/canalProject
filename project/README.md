@@ -3,8 +3,8 @@
 ## Interprétation de l'énoncé
 L'exercice consistait à réaliser les tests permettant de modifier l'adresse d'un abonné résidant en France.  
 Par conséquent, la modification de l'adresse n'était pas permise pour les pays qui étaient différents de la France.  
-La création d'un mouvement d'adresse permet selon moi de garder une trace des différentes modifications subies par une adresse  
-Je suis parti du principe qu'un abonné peut avoir différents contrats avec différentes adresses pour chacun  
+La création d'un mouvement d'adresse permet selon moi de garder une trace des différentes modifications subies par une adresse.  
+Je suis parti du principe qu'un abonné peut avoir différents contrats avec différentes adresses pour chacun.    
 
 ## Structure du projet
 src  
@@ -45,6 +45,6 @@ Examples:
 
 ## Lancement des tests
 Après avoir récupérer le projet sur git, il faut exécuter la commande maven "mvn clean verify" pour lancer les tests  
-Une fois lancé, un rapport sera généré et il sera disponible à ce répertoire: project\target\site\serenity\index.html (problème de compatibilité avec testng)  
-ou sur ce répertoire également: project/target/cucumber-report-html/cucumber-html-reports/*.html  
+
+Une fois lancé, un rapport sera généré et il sera disponible à ce répertoire: project\target\site\serenity\index.html (problème de compatibilité avec testng) ou sur ce répertoire également: project/target/cucumber-report-html/cucumber-html-reports/*.html  
 Il est aussi possible de tester l'appel des services en démarrant l'application via la requête mvn spring-boot:run et en faisant appel aux différents web service  
