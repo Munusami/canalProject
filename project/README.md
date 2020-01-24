@@ -36,12 +36,51 @@ Given un abonné avec une adresse principale "active" en "pays"
 When le conseiller connecté à "<canal>" modifie l'adresse de l'abonné "condition"  
 Then l'adresse de l'abonné modifiée est enregistrée sur l'ensemble des contrats de l'abonné  
 And Et un mouvement de modification d'adresse est créé  
+	
 
 Examples:  
 
 | canal | active   | pays   | condition         |  
 | FACE  | inactive |France  | sans date d’effet |  
 | EC    | active   |Pologne |avec date d’effet 	|  
+
+Voici la classe definition qui va contenir l'implémentation des tests associés au scénario  
+@Given("^un abonné avec une adresse principale \"([^\"]*)\" en \"([^\"]*)\"$")  
+	public void un_abonné_avec_une_adresse_principale_en(String active, String pays) {  
+		//la modification de l'adresse s'opère lorsque le pays est france  
+		abonne = new Abonne(1, "munusami", "kentish");  
+		if("france".equals(pays.toLowerCase())){  
+			adresse = new Adresse(1, "active".equals(active.toLowerCase())?true:false, pays, "", "", "", 1);  
+		}  
+	}  
+
+	@When("^le conseiller connecté à \"([^\"]*)\" modifie l'adresse de l'abonné \"([^\"]*)\"$")  
+	public void le_conseiller_connecté_à_modifie_l_adresse_de_l_abonné(String canal, String condition) {  
+		if("FACE".equals(canal)) {  
+			contrat = new Contrat(1, canal, condition, 1, 1);  
+			//simulation d'une modification de l'adresse de l'abonné  
+			adresse.setRue("2 rue de la defense");  
+			mouvement = new Mouvement(1, "modification adresse", new Date(), 1);  
+			
+		}  
+	    
+	}  
+
+	@Then("^l'adresse de l'abonné modifiée est enregistrée sur l'ensemble des contrats de l'abonné$")  
+	public void l_adresse_de_l_abonné_modifiée_est_enregistrée_sur_l_ensemble_des_contrats_de_l_abonné() {  
+		//on a un contrat qui respecte la condition parmis les contrats possibles  
+		if(contrat != null && "FACE".equals(contrat.getCanal())) {  
+			assertEquals(adresse.getRue(), "2 rue de la defense");  
+		}  
+	}  
+
+	@Then("^Et un mouvement de modification d'adresse est créé$")  
+	public void et_un_mouvement_de_modification_d_adresse_est_créé() {  
+		//on a un contrat qui respecte la condition parmis les contrats possibles  
+		if(contrat != null && "FACE".equals(contrat.getCanal())) {  
+			assertTrue(mouvement != null);  
+		}  
+	}  
 
 ## Lancement des tests
 Après avoir récupérer le projet sur git, il faut exécuter la commande maven "mvn clean verify" pour lancer les tests  
