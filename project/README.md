@@ -45,6 +45,7 @@ Examples:
 | EC    | active   |Pologne |avec date d’effet 	|  
 
 Voici la classe definition qui va contenir l'implémentation des tests associés au scénario  
+
 @Given("^un abonné avec une adresse principale \"([^\"]*)\" en \"([^\"]*)\"$")  
 	public void un_abonné_avec_une_adresse_principale_en(String active, String pays) {  
 		//la modification de l'adresse s'opère lorsque le pays est france  
