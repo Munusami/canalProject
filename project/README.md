@@ -1,4 +1,4 @@
-# Projet canal:Modification de l'adresse d'un client
+# Projet canal: Modification de l'adresse d'un abonné
  
 ## Interprétation de l'énoncé
 L'exercice consistait à réaliser les tests permettant de modifier l'adresse d'un abonné résidant en France.  
