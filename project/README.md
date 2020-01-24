@@ -29,7 +29,8 @@ src
 ## Scénario
 
 Feature: modifier l'adresse d'un abonné?  
-Lors de la modification de l'adresse d'un abonné résidant en France sans ou avec date d'effet, il faut que l'adresse de tous les contrats de l'abonné soit modifier et qu'un mouvement de modification d'adresse est créé  
+Lors de la modification de l'adresse d'un abonné résidant en France sans ou avec date d'effet, il faut que l'adresse de tous les contrats de l'abonné soit modifier et qu'un mouvement de modification d'adresse est créé.  
+Voici le fichier .feature associé à ce scénario  
 
 ```Gherkin
 Scenario Outline: Modification de l'adresse d'un abonné résidant en France sans ou avec date d'effet  
