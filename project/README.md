@@ -46,7 +46,17 @@ Examples:
 
 Voici la classe definition qui va contenir l'implémentation des tests associés au scénario  
 
-@Given("^un abonné avec une adresse principale \"([^\"]*)\" en \"([^\"]*)\"$")  
+```java
+public class StepDefinitions {  
+	private Abonne abonne;  
+	private Adresse adresse = null;  
+	private Contrat contrat;  
+	private Mouvement mouvement = null;  
+	private Response response;  
+	private OkHttpClient client = new OkHttpClient();  
+	
+	
+	@Given("^un abonné avec une adresse principale \"([^\"]*)\" en \"([^\"]*)\"$")  
 	public void un_abonné_avec_une_adresse_principale_en(String active, String pays) {  
 		//la modification de l'adresse s'opère lorsque le pays est france  
 		abonne = new Abonne(1, "munusami", "kentish");  
@@ -82,6 +92,9 @@ Voici la classe definition qui va contenir l'implémentation des tests associés
 			assertTrue(mouvement != null);  
 		}  
 	}  
+
+}  
+```
 
 ## Lancement des tests
 Après avoir récupérer le projet sur git, il faut exécuter la commande maven "mvn clean verify" pour lancer les tests  
